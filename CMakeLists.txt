@@ -15,6 +15,7 @@ include(Cmake/infra.cmake)
 include(Cmake/utility.cmake)
 include(Cmake/defintion.cmake)
 include(Cmake/compile_option.cmake)
+include(Cmake/link_options.cmake)
 
 add_executable( main Source/main.cpp )
 

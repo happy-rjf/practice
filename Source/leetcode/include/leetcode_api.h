@@ -9,14 +9,18 @@
 #define D3EEA43B_4B3B_41C9_8C77_BF1CC1BED6B8
 
 #include "externc.h"
+#include <string>
+using namespace std;
 
 EXTERN_STDC_BEGIN
+
+
+
+EXTERN_STDC_END
 
 /* @ brief 13. 罗马数字转整数
  @note https://leetcode.cn/problems/roman-to-integer/
  */
-int romanToInt(char *s);
-
-EXTERN_STDC_END
+int romanToInt(void);
 
 #endif /* D3EEA43B_4B3B_41C9_8C77_BF1CC1BED6B8 */

@@ -8,8 +8,9 @@ int main(void)
     printf("myFirstProject %d\n", g_a);
     
 
-    romanToInt("abc");
+    romanToInt();
 
     return 0;
 }
+
 
