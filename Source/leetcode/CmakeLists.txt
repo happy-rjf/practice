@@ -1,0 +1,18 @@
+
+
+file(GLOB_RECURSE src 
+    *.c
+    *.cpp
+)
+
+message("src: ${src}")
+add_library(leetcode STATIC ${src})
+target_compile_options(leetcode
+PRIVATE
+    -Wall
+)
+
+target_include_directories(leetcode
+PUBLIC
+    include
+)

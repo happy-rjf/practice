@@ -1,0 +1,95 @@
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "run",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "cmd",
+            "preLaunchTask": "compile",
+            "args": [
+                "/C",
+                "main.exe",
+                "&",
+                "pause",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}\\Build\\",
+            "environment": [],
+            "console":"externalTerminal",
+        },
+        {
+            "name": "run with clean",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "cmd",
+            "preLaunchTask": "compile clean",
+            "args": [
+                "/C",
+                "main.exe",
+                "&",
+                "pause",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}\\Build\\",
+            "environment": [],
+            "console":"externalTerminal",
+        },
+        {
+            "name": "gdb",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Build\\main.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}\\Build\\",
+            "environment": [],
+            // "console":"internalTerminal",
+            "externalConsole":false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:\\15.MinGW_W64\\mingw64\\bin\\gdb.exe",// 自己电脑的gdb
+            "preLaunchTask": "compile",//这里和task.json的label相对应
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "gdb with clean",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Build\\main.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}\\Build\\",
+            "environment": [],
+            // "console":"internalTerminal",
+            "externalConsole":false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:\\15.MinGW_W64\\mingw64\\bin\\gdb.exe",// 自己电脑的gdb
+            "preLaunchTask": "compile clean",//这里和task.json的label相对应
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "preprocess",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "",
+            "preLaunchTask": "preprocess",
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console":"externalTerminal",
+        },
+    ]
+}
