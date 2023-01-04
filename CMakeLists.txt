@@ -17,7 +17,13 @@ include(Cmake/defintion.cmake)
 include(Cmake/compile_option.cmake)
 include(Cmake/link_options.cmake)
 
-add_executable( main Source/main.cpp )
+file(GLOB src 
+    Source/*.c
+    Source/*.cpp
+)
+
+message(111 ${src})
+add_executable(main ${src})
 
 target_compile_options(main
     PRIVATE

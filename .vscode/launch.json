@@ -91,5 +91,46 @@
             "environment": [],
             "console":"externalTerminal",
         },
+        {
+            "name": "run current cppfile",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "cmd",
+            "preLaunchTask": "build current cppfile",
+            "args": [
+                "/C",
+                "a.exe",
+                "&",
+                "pause",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}\\Build\\",
+            "environment": [],
+            "console":"externalTerminal",
+        },
+        {
+            "name": "gdb current cppfile",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Build\\a.exe",
+            // "program": "${fileWorkspaceFolder}\\${relativeFileDirname}\\a.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}\\Build\\",
+            // "cwd": "${fileWorkspaceFolder}\\${relativeFileDirname}",
+            "environment": [],
+            "console":"internalTerminal",
+            "externalConsole":false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:\\15.MinGW_W64\\mingw64\\bin\\gdb.exe",// 自己电脑的gdb
+            "preLaunchTask": "build current cppfile",//这里和task.json的label相对应
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
     ]
 }

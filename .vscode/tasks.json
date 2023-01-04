@@ -83,7 +83,24 @@
                 "cwd": "${workspaceFolder}/Build"
             },
             "dependsOn": [
-                "cmake clean",
+                "",
+            ]
+        },
+        {
+            "label": "build current cppfile",
+            "type": "cppbuild",
+            "command": "g++",
+            "args": [    
+                "../${relativeFile}", 
+                // "${fileBasename}",
+                "-g",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/Build"
+                // "cwd": "${fileWorkspaceFolder}/${relativeFileDirname}"
+            },
+            "dependsOn": [
+                "",
             ]
         },
 
