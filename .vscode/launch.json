@@ -48,7 +48,7 @@
             // "console":"internalTerminal",
             "externalConsole":false,
             "MIMode": "gdb",
-            "miDebuggerPath": "D:\\15.MinGW_W64\\mingw64\\bin\\gdb.exe",// 自己电脑的gdb
+            "miDebuggerPath": "E:\\15.MinGW_W64\\mingw64\\bin\\gdb.exe",// 自己电脑的gdb
             "preLaunchTask": "compile",//这里和task.json的label相对应
             "setupCommands": [
                 {
@@ -70,7 +70,7 @@
             // "console":"internalTerminal",
             "externalConsole":false,
             "MIMode": "gdb",
-            "miDebuggerPath": "D:\\15.MinGW_W64\\mingw64\\bin\\gdb.exe",// 自己电脑的gdb
+            "miDebuggerPath": "E:\\15.MinGW_W64\\mingw64\\bin\\gdb.exe",// 自己电脑的gdb
             "preLaunchTask": "compile clean",//这里和task.json的label相对应
             "setupCommands": [
                 {
@@ -122,7 +122,7 @@
             "console":"internalTerminal",
             "externalConsole":false,
             "MIMode": "gdb",
-            "miDebuggerPath": "D:\\15.MinGW_W64\\mingw64\\bin\\gdb.exe",// 自己电脑的gdb
+            "miDebuggerPath": "E:\\15.MinGW_W64\\mingw64\\bin\\gdb.exe",// 自己电脑的gdb
             "preLaunchTask": "build current cppfile",//这里和task.json的label相对应
             "setupCommands": [
                 {
